@@ -1,0 +1,18 @@
+<form [formGroup]="listForm">
+  <label> List Name: 
+    <input type="text" id="" formControlName="listName">
+  </label>
+  <!-- <app-list-form-entry [parentForm]="listForm"></app-list-form-entry> -->
+  <button (click)="createListEntry()">Add entry</button>
+  <div FormArrayName="listEntries">
+    <div *ngFor="let listEntryGroup of listEntries.controls; let i=index">
+        <!-- <label>
+            List entry:
+            <input type="text" [formControlName]="i">
+          </label> -->
+        <app-list-form-entry [myGroup]="listEntryGroup"></app-list-form-entry>
+    </div>
+  </div>
+  <button class="listEntry-createButton" (click)="createListEntry()">Add entry</button>
+  <button (click)="createList()">Create List</button>
+</form>
