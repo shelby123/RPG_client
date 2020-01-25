@@ -11,7 +11,7 @@ import { NG_MODEL_WITH_FORM_CONTROL_WARNING } from '@angular/forms/src/directive
 })
 export class ListFormComponent implements OnInit {
 
-  private listForm: FormGroup;
+  listForm: FormGroup;
   private list: IList;
   // private listEntries: IListFormEntry[];
 
